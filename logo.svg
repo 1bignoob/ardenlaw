@@ -1,0 +1,16 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Arden Law AL monogram">
+  <defs>
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D1B17E"/>
+      <stop offset="100%" stop-color="#A88145"/>
+    </linearGradient>
+  </defs>
+
+  <circle cx="100" cy="100" r="92" fill="#EFE7DE"/>
+  <circle cx="100" cy="100" r="90" fill="none" stroke="url(#ring)" stroke-width="4"/>
+  <circle cx="100" cy="100" r="78" fill="#7B2B24"/>
+  <circle cx="100" cy="100" r="76" fill="none" stroke="#C6A46A" stroke-width="2" opacity="0.75"/>
+
+  <path d="M49 132 L70 66 L83 66 L104 132 L93 132 L87 114 L66 114 L60 132 Z M69 104 H84 L76.5 81 Z" fill="#F6F1EA"/>
+  <path d="M110 66 H122 V122 H151 V132 H110 Z" fill="#C6A46A"/>
+</svg>
