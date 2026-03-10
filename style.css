@@ -825,7 +825,7 @@ section {
     background: var(--parchment);
     transition: left 0.3s;
     z-index: 999;
-    padding: 2rem 0;
+    padding: 2rem;
     gap: 2rem;
   }
 
