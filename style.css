@@ -59,10 +59,25 @@ body {
   text-decoration: none;
 }
 
+.logo-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--parchment);
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 0 1px rgba(198, 164, 106, 0.4);
+  flex-shrink: 0;
+}
+
 .logo-image {
-  width: 48px;
-  height: 48px;
+  height: 46px;
+  width: 46px;
   display: block;
+  border-radius: 50%;
+  object-fit: contain;
 }
 
 .logo-text {
@@ -145,26 +160,24 @@ body {
 }
 
 .hero-features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  margin-top: 8rem;
 }
 
 .feature-item {
-  text-align: center;
-  padding-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.feature-title {
-  font-size: 1.5rem;
-  color: var(--gold);
-  margin-bottom: 0.5rem;
-}
-
-.feature-text {
-  font-size: 0.9rem;
-  color: rgba(59,42,38,0.82);
+.badge-img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
 }
 
 /* Buttons */
