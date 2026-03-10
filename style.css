@@ -25,6 +25,7 @@ body {
   background: var(--parchment);
   color: var(--text-dark);
   line-height: 1.6;
+  padding-top: 98px;
 }
 
 .container {
@@ -38,8 +39,10 @@ body {
   background: var(--oxblood);
   border-bottom: 2px solid var(--gold);
   padding: 1.5rem 0;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
 }
 
