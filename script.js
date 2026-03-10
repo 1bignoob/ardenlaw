@@ -76,8 +76,8 @@ window.addEventListener('scroll', () => {
         link.style.color = '';
         
         if (link.getAttribute('href') === `#${currentSection}`) {
-            link.style.color = 'var(--burgundy-light)';
-            link.style.borderBottomColor = 'var(--burgundy-light)';
+            link.style.color = 'var(--gold)';
+            link.style.borderBottomColor = 'var(--gold)';
         }
     });
 });

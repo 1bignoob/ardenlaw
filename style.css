@@ -79,11 +79,14 @@ body {
   color: var(--text-light);
   text-decoration: none;
   font-weight: 600;
+  border-bottom: 2px solid transparent;
   transition: color 0.3s;
 }
 
-.nav-menu li a:hover {
+.nav-menu li a:hover,
+.nav-menu li a:focus-visible {
   color: var(--gold);
+  border-bottom-color: var(--gold);
 }
 
 .nav-toggle {
@@ -186,16 +189,18 @@ body {
 }
 
 .btn-primary:hover {
-  background: var(--oxblood);
+  background: transparent;
+  color: var(--burgundy);
 }
 
 .btn-secondary {
   background: transparent;
-  color: var(--text-light);
+  color: var(--burgundy);
 }
 
 .btn-secondary:hover {
-  background: rgba(198,164,106,0.2);
+  background: var(--burgundy);
+  color: var(--text-light);
 }
 
 /* Sections */
