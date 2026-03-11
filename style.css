@@ -29,9 +29,10 @@ body {
 }
 
 .container {
+  /* LAYOUT NOTE: reduced side margins/gutters by ~70% */
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 0.4rem;
 }
 
 /* Navigation */
@@ -96,7 +97,8 @@ body {
 .nav-menu li a {
   color: var(--text-light);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 0.9rem;
   border-bottom: 2px solid transparent;
   transition: color 0.3s;
 }
