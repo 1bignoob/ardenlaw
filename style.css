@@ -1240,7 +1240,7 @@ section {
     padding: 0.5rem 1rem;
     font-size: 0.85rem;
   }
-  .hero-title { font-size: 2rem; }
+  .hero-title { font-size: 2rem; text-align: center; }
   .hero-buttons { flex-direction: column; }
   .btn { width: 100%; }
   .contact-content { grid-template-columns: 1fr; }

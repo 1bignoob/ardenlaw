@@ -1,0 +1,7 @@
+Chat Recap March 11
+
+You evolved the Arden Law site from basic content edits into a full SEO and UX refinement pass. First, navigation and mobile behavior were stabilized: menu close/open logic was fixed, dropdown behavior improved, and layout spacing adjusted for smaller screens. Then you executed broad SEO work across all pages: meta descriptions, keywords, canonical links, structured data, and a standardized head-tag order. You also prepared launch readiness by adding “Remove .html when live” comments wherever clean URLs will later replace .html links.
+
+Next, naming and content polish followed: pages were renamed for simplicity, all internal links updated, robots directives were adjusted and documented, JSON-LD URLs were corrected page-by-page, and contact schema received a postal address. Heading hierarchy was then optimized for semantic SEO (single H1 per page, cleaner H2/H3/H4 flow).
+
+A new FAQ page was introduced, linked as a new final nav item, and “Contact / Free Consultation” was renamed to “Contact.” FAQ content was progressively expanded from FAQ.txt and FAQ2.txt, with each new question added both to visible content and FAQPage schema. UX refinements included hover affordances, active-page nav highlighting, simplified text-only FAQ toggles, independent two-column expansion behavior, and responsive/mobile validation checks.
