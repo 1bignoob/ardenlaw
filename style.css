@@ -1240,14 +1240,16 @@ section {
     padding: 0.5rem 1rem;
     font-size: 0.85rem;
   }
+  .hero-label { text-align: center; }
   .hero-title { font-size: 2rem; text-align: center; }
+  .hero-subtitle { text-align: center; }
   .hero-buttons { flex-direction: column; }
-  .btn { width: 100%; }
-  .contact-content { grid-template-columns: 1fr; }
+  .btn { width: 100%; text-align: center; }
+  .contact-content { grid-template-columns: 1fr; text-align: center; }
   .hero-features { gap: 0.6rem; }
   .badge-img { height: 36px; }
   .hero-value-cards { flex-direction: column; gap: 0.6rem; }
-  .hero-value-card { font-size: 0.85rem; padding: 0.8rem 1rem; }
+  .hero-value-card { font-size: 0.85rem; padding: 0.8rem 1rem; text-align: center; }
   .settlement-card { flex: 0 0 calc((100% - 0.8rem) / 2); min-height: 47px; padding: 0.35rem 0.45rem; }
   .settlement-name { font-size: 0.82rem; }
   .settlement-amount { font-size: 0.94rem; }
@@ -1257,6 +1259,14 @@ section {
   .practice-heading { text-align: center; }
   .about-text { text-align: center; }
   .practice-cta-bar { text-align: center; }
+  .practice-card { text-align: center; }
+  .process-step { text-align: center; }
+  .testimonial-block { text-align: center; }
+  .benefit-card { text-align: center; }
+  .value-card { text-align: center; }
+  .priority-block { text-align: center; }
+  .contact-form-wrapper { text-align: center; }
+  .faq-item summary h2 { text-align: center; }
 }
 
 @media (max-width: 560px) {
