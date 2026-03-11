@@ -20,6 +20,18 @@ navToggle.addEventListener('click', () => {
 
 // Close mobile menu when clicking on a link
 const navLinks = document.querySelectorAll('.nav-menu a');
+
+// Highlight current page in nav across all pages.
+const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href || href.startsWith('#')) return;
+    if (href === currentPath) {
+        link.classList.add('active-page');
+        link.setAttribute('aria-current', 'page');
+    }
+});
+
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         if (window.innerWidth <= 768 && e.currentTarget.classList.contains('dropdown-toggle')) {
@@ -137,6 +149,9 @@ window.addEventListener('scroll', () => {
     
     // Update nav links
     navLinks.forEach(link => {
+        if (!link.getAttribute('href') || !link.getAttribute('href').startsWith('#')) {
+            return;
+        }
         link.style.borderBottomColor = 'transparent';
         link.style.color = '';
         

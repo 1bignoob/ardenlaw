@@ -7,6 +7,7 @@
   --parchment-dark: #E3D8CC;
   --parchment-line: #D4C5B4;
   --gold: #C6A46A;
+  --antique-gold: #C6A46A;
   --gold-deep: #A88145;
   --slate-blue: #5E6B7A;
   --slate-blue-dark: #3E4A5A;
@@ -107,6 +108,12 @@ body {
 .nav-menu li a:focus-visible {
   color: var(--gold);
   border-bottom-color: var(--gold);
+}
+
+.nav-menu li a.active-page,
+.nav-menu li a[aria-current='page'] {
+  color: var(--antique-gold);
+  border-bottom-color: var(--antique-gold);
 }
 
 .nav-toggle {
@@ -213,6 +220,55 @@ body {
   margin: 2rem 0 0.6rem;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+}
+
+/* FAQ accordions (native details/summary: multiple can stay open) */
+.faq-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  align-items: start;
+}
+
+.faq-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-item {
+  margin-bottom: 0.65rem;
+}
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0.35rem 0;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary:hover,
+.faq-item summary:focus-visible {
+  color: var(--antique-gold);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.faq-item p.about-text {
+  margin: 0.15rem 0 0.85rem;
+  padding: 0;
+}
+
+@media (max-width: 1024px) {
+  .faq-columns {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
 }
 
 .practice-detail-sidebar {

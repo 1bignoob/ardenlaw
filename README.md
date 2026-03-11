@@ -18,7 +18,7 @@ This website reimagines the Arden Law online presence with a more traditional, b
 ### Sections
 1. **Hero Section**: Bold introduction with firm tagline and call-to-action buttons
 2. **Client Priorities**: Three key focus areas displayed in blocky format
-3. **About the Firm**: Firm philosophy and core values
+3. **About Our Firm**: Firm philosophy and core values
 4. **Practice Areas**: Four practice areas with detailed descriptions
    - Car Accident Lawyer
    - Truck Accident Lawyer
