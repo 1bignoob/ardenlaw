@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- INDEXING DISABLED — remove this tag when ready to go live -->
+    <meta name="robots" content="noindex, nofollow">
     <title>Arden Law - Injury Attorneys</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,14 +14,23 @@
         <div class="container">
             <a href="#home" class="nav-brand" aria-label="Arden Law home">
                 <span class="logo-circle"><img src="assets/img/ArdenLogo.png" alt="Arden Law logo" class="logo-image"></span>
-                <span class="logo-text">ARDEN LAW</span>
+                <span class="logo-text">Arden Law Firm</span>
             </a>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#about">ABOUT</a></li>
-                <li><a href="#practice">PRACTICE AREAS</a></li>
-                <li><a href="#process">PROCESS</a></li>
-                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="index.html">HOME</a></li>
+                <li class="has-dropdown">
+                    <a href="practice-areas.html" class="dropdown-toggle">PRACTICE AREAS <span class="dropdown-arrow">&#9660;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="car-accidents.html">Car Accidents</a></li>
+                        <li><a href="truck-accidents.html">Truck Accidents</a></li>
+                        <li><a href="slip-and-fall.html">Slip &amp; Fall</a></li>
+                        <li><a href="medical-malpractice.html">Medical Malpractice</a></li>
+                        <li><a href="wrongful-death.html">Wrongful Death</a></li>
+                        <li><a href="work-injuries.html">Work Injuries</a></li>
+                    </ul>
+                </li>
+                <li><a href="#about">ABOUT THE FIRM</a></li>
+                <li><a href="#contact">CONTACT / FREE CONSULTATION</a></li>
             </ul>
             <div class="nav-toggle" id="navToggle">
                 <span></span>
@@ -41,6 +52,11 @@
                     <a href="#contact" class="btn btn-primary">Book a Consultation</a>
                     <a href="#practice" class="btn btn-secondary">Explore Practice Areas</a>
                 </div>
+                <div class="hero-value-cards">
+                    <div class="hero-value-card">We Fight Relentlessly to Protect Our Clients' Rights</div>
+                    <div class="hero-value-card">Personalized Legal Representation — Every Case Matters</div>
+                    <div class="hero-value-card">Strategic Legal Representation Built on Experience and Preparation</div>
+                </div>
                 <div class="hero-features">
                     <div class="feature-item">
                         <img src="assets/img/ArdenAvvo.png" alt="Avvo Rating" class="badge-img">
@@ -61,6 +77,12 @@
                         <img src="assets/img/ArdenUnder40.png" alt="Under 40 Award" class="badge-img">
                     </div>
                 </div>
+                <!-- SETTLEMENTS INDEX COMMENTED OUT — uncomment to restore carousel
+                <div class="settlements-scroll">
+                    <div class="settlements-container" id="settlementsContainer">
+                    </div>
+                </div>
+                -->
             </div>
         </div>
     </section>

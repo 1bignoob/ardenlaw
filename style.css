@@ -120,6 +120,199 @@ body {
   background: var(--text-light);
 }
 
+/* Dropdown Menu */
+.has-dropdown {
+  position: relative;
+}
+
+.dropdown-arrow {
+  font-size: 0.65em;
+  margin-left: 0.3em;
+  display: inline-block;
+  transition: transform 0.2s;
+  vertical-align: middle;
+}
+
+.has-dropdown:hover .dropdown-arrow,
+.has-dropdown.open .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--oxblood);
+  border: 1px solid var(--gold);
+  border-top: 2px solid var(--gold);
+  list-style: none;
+  min-width: 200px;
+  z-index: 1001;
+  padding: 0.4rem 0;
+  /* Invisible top padding bridges any sub-pixel gap */
+  margin-top: 0;
+}
+
+/* Invisible hover bridge: fills gap between nav item and dropdown */
+.has-dropdown.open .dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
+
+.has-dropdown.open .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.55rem 1.25rem;
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.88rem;
+  white-space: nowrap;
+  border-bottom: none !important;
+  transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-menu li a:hover {
+  background: rgba(198, 164, 106, 0.15);
+  color: var(--gold);
+}
+
+/* Practice Detail Pages */
+.practice-detail {
+  background: var(--parchment);
+  padding: 4rem 0;
+}
+
+.practice-detail-content {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 3rem;
+  align-items: start;
+}
+
+.practice-detail-main h2.section-title {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.practice-heading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--burgundy);
+  margin: 2rem 0 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.practice-detail-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: sticky;
+  top: 118px;
+}
+
+.sidebar-cta {
+  background: var(--oxblood);
+  border: 2px solid var(--gold);
+  padding: 1.75rem;
+  text-align: center;
+}
+
+.sidebar-cta h3 {
+  color: var(--gold);
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+}
+
+.sidebar-cta p {
+  color: var(--text-light);
+  margin-bottom: 1.25rem;
+  font-size: 0.93rem;
+  line-height: 1.55;
+}
+
+.sidebar-cta .btn {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.sidebar-cta .btn:last-of-type {
+  margin-bottom: 0;
+}
+
+.sidebar-points {
+  background: white;
+  border: 2px solid var(--gold);
+  padding: 1.5rem;
+}
+
+.sidebar-points h3 {
+  color: var(--burgundy);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.9rem;
+}
+
+.sidebar-points ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-points ul li {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--parchment-line);
+  color: var(--text-dark);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.sidebar-points ul li:last-child {
+  border-bottom: none;
+}
+
+.sidebar-points ul li::before {
+  content: "\25B8  ";
+  color: var(--gold);
+}
+
+.practice-cta-bar {
+  background: var(--oxblood);
+  border-top: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.practice-cta-bar h2 {
+  color: var(--text-light);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.practice-cta-bar p {
+  color: rgba(246,241,234,0.85);
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.practice-cta-bar .btn {
+  margin: 0 0.5rem;
+}
+
 /* Hero Section */
 .hero {
   background: var(--parchment);
@@ -159,13 +352,38 @@ body {
   flex-wrap: wrap;
 }
 
+.hero-value-cards {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.hero-value-card {
+  flex: 1;
+  padding: 1rem 1.25rem;
+  background: var(--oxblood);
+  border: 1px solid var(--gold);
+  border-left: 4px solid var(--gold);
+  color: var(--parchment);
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.45;
+  text-align: left;
+}
+
 .hero-features {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start;
-  gap: 1.5rem;
-  margin-top: 8rem;
+  justify-content: space-evenly;
+  gap: 1rem;
+  margin-top: 15rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .feature-item {
@@ -177,7 +395,85 @@ body {
 .badge-img {
   height: 60px;
   width: auto;
+  max-width: 100%;
   object-fit: contain;
+  flex-shrink: 1;
+}
+
+/* Settlements Scrolling Section */
+.settlements-scroll {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+}
+
+.settlements-container {
+  display: flex;
+  gap: 0.8rem;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.settlement-card {
+  flex: 0 0 calc((100% - 3.2rem) / 5);
+  min-height: 46px;
+  padding: 0.35rem 0.45rem;
+  background-color: var(--slate-blue);
+  border: 2px solid var(--gold);
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.settlement-case {
+  text-align: center;
+  position: relative;
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+  line-height: 1.15;
+}
+
+/* .settlement-case::before,
+.settlement-case::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: var(--gold);
+  opacity: 0.6;
+}
+
+.settlement-case::before {
+  top: 0;
+}
+
+.settlement-case::after {
+  bottom: 0;
+} */
+
+.settlement-quote {
+  display: none;
+}
+
+.settlement-name {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 0.12rem;
+  line-height: 1.12;
+}
+
+.settlement-amount {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1.12;
 }
 
 /* Buttons */
@@ -821,9 +1117,17 @@ section {
 }
 
 /* Responsive */
+@media (max-width: 1280px) and (min-width: 1025px) {
+  .settlement-card { flex: 0 0 calc((100% - 2.4rem) / 4); }
+}
+
 @media (max-width: 1024px) {
   .hero-title { font-size: 2.5rem; }
   .about-content, .contact-content { grid-template-columns: 1fr; }
+  .badge-img { height: 48px; }
+  .settlement-card { flex: 0 0 calc((100% - 1.6rem) / 3); }
+  .practice-detail-content { grid-template-columns: 1fr; }
+  .practice-detail-sidebar { position: static; }
 }
 
 @media (max-width: 768px) {
@@ -852,8 +1156,43 @@ section {
 
   .nav-menu.active { display: flex; left: 0; }
   .nav-toggle { display: flex; }
+
+  /* Mobile dropdown */
+  .dropdown-menu {
+    display: none;
+    position: static;
+    transform: none;
+    background: rgba(0, 0, 0, 0.25);
+    border: none;
+    border-left: 2px solid var(--gold);
+    margin: 0.35rem 0 0 1.5rem;
+    padding: 0;
+    min-width: unset;
+  }
+
+  .has-dropdown.open > .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu li a {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
   .hero-title { font-size: 2rem; }
   .hero-buttons { flex-direction: column; }
   .btn { width: 100%; }
   .contact-content { grid-template-columns: 1fr; }
+  .hero-features { gap: 0.6rem; }
+  .badge-img { height: 36px; }
+  .hero-value-cards { flex-direction: column; gap: 0.6rem; }
+  .hero-value-card { font-size: 0.85rem; padding: 0.8rem 1rem; }
+  .settlement-card { flex: 0 0 calc((100% - 0.8rem) / 2); min-height: 47px; padding: 0.35rem 0.45rem; }
+  .settlement-name { font-size: 0.82rem; }
+  .settlement-amount { font-size: 0.94rem; }
+}
+
+@media (max-width: 560px) {
+  .settlement-card { flex: 0 0 100%; min-height: 51px; }
+  .settlement-name { font-size: 0.8rem; }
+  .settlement-amount { font-size: 0.92rem; }
 }

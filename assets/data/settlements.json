@@ -1,0 +1,84 @@
+{
+  "settlements": [
+    {
+      "name": "Maria Rodriguez",
+      "amount": "$2.8M"
+    },
+    {
+      "name": "James Patterson",
+      "amount": "$1.5M"
+    },
+    {
+      "name": "Sarah Chen",
+      "amount": "$3.2M"
+    },
+    {
+      "name": "Michael Torres",
+      "amount": "$2.1M"
+    },
+    {
+      "name": "Jennifer Walsh",
+      "amount": "$4.7M"
+    },
+    {
+      "name": "David Rothstein",
+      "amount": "$1.9M"
+    },
+    {
+      "name": "Amanda Cohen",
+      "amount": "$3.5M"
+    },
+    {
+      "name": "Robert Mitchell",
+      "amount": "$2.6M"
+    },
+    {
+      "name": "Lisa Nakamura",
+      "amount": "$5.1M"
+    },
+    {
+      "name": "Christopher White",
+      "amount": "$2.3M"
+    },
+    {
+      "name": "Daniel Fitzgerald",
+      "amount": "$3.9M"
+    },
+    {
+      "name": "Rachel Hernandez",
+      "amount": "$4.2M"
+    },
+    {
+      "name": "Kevin O'Brien",
+      "amount": "$2.5M"
+    },
+    {
+      "name": "Sophia Martinez",
+      "amount": "$5.8M"
+    },
+    {
+      "name": "Brandon Lee",
+      "amount": "$3.1M"
+    },
+    {
+      "name": "Nicole Patel",
+      "amount": "$4.6M"
+    },
+    {
+      "name": "Alexander Kim",
+      "amount": "$2.9M"
+    },
+    {
+      "name": "Jasmine Williams",
+      "amount": "$6.2M"
+    },
+    {
+      "name": "Tyler Jackson",
+      "amount": "$3.7M"
+    },
+    {
+      "name": "Emma Davis",
+      "amount": "$4.9M"
+    }
+  ]
+}

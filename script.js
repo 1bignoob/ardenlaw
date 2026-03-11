@@ -30,6 +30,44 @@ navLinks.forEach(link => {
     });
 });
 
+// Desktop dropdown: hover with small leave-delay so menu doesn't vanish on mouse gap
+const dropdowns = document.querySelectorAll('.has-dropdown');
+let dropdownTimeout = null;
+
+dropdowns.forEach(item => {
+    item.addEventListener('mouseenter', function() {
+        if (window.innerWidth > 768) {
+            clearTimeout(dropdownTimeout);
+            dropdowns.forEach(d => d.classList.remove('open'));
+            this.classList.add('open');
+        }
+    });
+    item.addEventListener('mouseleave', function() {
+        if (window.innerWidth > 768) {
+            const self = this;
+            dropdownTimeout = setTimeout(() => self.classList.remove('open'), 300);
+        }
+    });
+});
+
+// Mobile dropdown: tap toggle
+document.querySelectorAll('.has-dropdown .dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            const parent = this.closest('.has-dropdown');
+            parent.classList.toggle('open');
+        }
+    });
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('.has-dropdown')) {
+        document.querySelectorAll('.has-dropdown.open').forEach(el => el.classList.remove('open'));
+    }
+});
+
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -86,8 +124,9 @@ window.addEventListener('scroll', () => {
 const form = document.getElementById("form");
 const result = document.getElementById("result");
 
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
+if (form) {
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
     let submissionSucceeded = false;
 
@@ -144,7 +183,8 @@ form.addEventListener("submit", function (e) {
                 result.style.display = "none";
             }, 3000);
         });
-});
+    }); // end form.addEventListener
+} // end if(form)
 
 /* End new form */
 
@@ -240,3 +280,93 @@ document.addEventListener('DOMContentLoaded', () => {
     updatePracticeOverflowState();
     window.addEventListener('resize', updatePracticeOverflowState);
 });
+
+/* SETTLEMENT CAROUSEL COMMENTED OUT — uncomment to restore (mirrors assets/data/settlements.json)
+document.addEventListener('DOMContentLoaded', () => {
+    const settlements = [
+        { name: "Maria Rodriguez", amount: "$2.8M" },
+        { name: "James Patterson", amount: "$1.5M" },
+        { name: "Sarah Chen", amount: "$3.2M" },
+        { name: "Michael Torres", amount: "$2.1M" },
+        { name: "Jennifer Walsh", amount: "$4.7M" },
+        { name: "David Rothstein", amount: "$1.9M" },
+        { name: "Amanda Cohen", amount: "$3.5M" },
+        { name: "Robert Mitchell", amount: "$2.6M" },
+        { name: "Lisa Nakamura", amount: "$5.1M" },
+        { name: "Christopher White", amount: "$2.3M" },
+        { name: "Daniel Fitzgerald", amount: "$3.9M" },
+        { name: "Rachel Hernandez", amount: "$4.2M" },
+        { name: "Kevin O'Brien", amount: "$2.5M" },
+        { name: "Sophia Martinez", amount: "$5.8M" },
+        { name: "Brandon Lee", amount: "$3.1M" },
+        { name: "Nicole Patel", amount: "$4.6M" },
+        { name: "Alexander Kim", amount: "$2.9M" },
+        { name: "Jasmine Williams", amount: "$6.2M" },
+        { name: "Tyler Jackson", amount: "$3.7M" },
+        { name: "Emma Davis", amount: "$4.9M" }
+    ];
+
+    const container = document.getElementById('settlementsContainer');
+    if (!container) return;
+
+    const shuffled = settlements.slice().sort(() => Math.random() - 0.5);
+
+    shuffled.forEach((settlement) => {
+        const card = document.createElement('div');
+        card.className = 'settlement-card';
+        card.innerHTML =
+            '<div class="settlement-case">' +
+                '<div class="settlement-name">' + settlement.name + '</div>' +
+                '<div class="settlement-amount">Settlement: ' + settlement.amount + '</div>' +
+            '</div>';
+        container.appendChild(card);
+    });
+
+    let current = 0;
+    const total = shuffled.length;
+
+    function getVisible() {
+        if (window.innerWidth <= 560) return 1;
+        if (window.innerWidth <= 768) return 2;
+        if (window.innerWidth <= 1024) return 3;
+        if (window.innerWidth <= 1280) return 4;
+        return 5;
+    }
+
+    function getStepPx() {
+        const card = container.querySelector('.settlement-card');
+        if (!card) return 0;
+        const gap = parseFloat(getComputedStyle(container).gap) || 0;
+        return card.offsetWidth + gap;
+    }
+
+    function advance() {
+        const visible = getVisible();
+        const maxIndex = total - visible;
+
+        if (current >= maxIndex) {
+            // Silently reset to start
+            container.style.transition = 'none';
+            current = 0;
+            container.style.transform = 'translateX(0)';
+            requestAnimationFrame(() => requestAnimationFrame(() => {
+                container.style.transition = 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+            }));
+        } else {
+            current++;
+            container.style.transform = 'translateX(-' + (current * getStepPx()) + 'px)';
+        }
+    }
+
+    // Reset position on resize so cards don't get stuck mid-scroll
+    window.addEventListener('resize', () => {
+        current = 0;
+        container.style.transition = 'none';
+        container.style.transform = 'translateX(0)';
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+            container.style.transition = 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+        }));
+    });
+
+    setInterval(advance, 4000);
+}); */
