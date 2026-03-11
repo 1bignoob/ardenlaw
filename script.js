@@ -57,9 +57,11 @@ dropdowns.forEach(item => {
 document.querySelectorAll('.has-dropdown .dropdown-toggle').forEach(toggle => {
     toggle.addEventListener('click', function(e) {
         if (window.innerWidth <= 768) {
-            e.preventDefault();
             const parent = this.closest('.has-dropdown');
-            parent.classList.toggle('open');
+            if (!parent.classList.contains('open')) {
+                e.preventDefault();
+                parent.classList.add('open');
+            }
         }
     });
 });
