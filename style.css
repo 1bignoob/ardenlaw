@@ -1256,6 +1256,7 @@ section {
   .about-header { text-align: center; }
   .section-title { text-align: center; }
   .section-subtitle { text-align: center; }
+  .practice-detail-main h2.section-title { text-align: center; }
   .practice-heading { text-align: center; }
   .about-text { text-align: center; }
   .practice-cta-bar { text-align: center; }
