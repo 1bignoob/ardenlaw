@@ -70,7 +70,8 @@ document.querySelectorAll('.has-dropdown .dropdown-toggle').forEach(toggle => {
 // Close dropdown when clicking outside - nested behavior for mobile
 let dropdownOpen = false;
 document.addEventListener('click', function(e) {
-    if (!e.target.closest('.has-dropdown')) {
+    const clickedInsideNavbar = e.target.closest('.navbar');
+    if (!e.target.closest('.has-dropdown') && !clickedInsideNavbar) {
         const openDropdowns = document.querySelectorAll('.has-dropdown.open');
         
         if (window.innerWidth <= 768) {
