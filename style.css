@@ -214,7 +214,7 @@ body {
 }
 
 .practice-heading {
-  font-size: 1.1rem;
+  font-size: 0.7rem;
   font-weight: 700;
   color: var(--burgundy);
   margin: 2rem 0 0.6rem;
@@ -244,8 +244,25 @@ body {
   list-style: none;
   cursor: pointer;
   margin: 0;
-  padding: 0.35rem 0;
+  padding: 0.35rem 0 0.35rem 1.1rem;
+  position: relative;
   transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.faq-item summary::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-52%) rotate(0deg);
+  color: var(--antique-gold);
+  font-size: 0.9rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.faq-item[open] summary::before {
+  transform: translateY(-52%) rotate(90deg);
 }
 
 .faq-item summary::-webkit-details-marker {
@@ -259,9 +276,29 @@ body {
   text-underline-offset: 0.18em;
 }
 
+.faq-item[open] summary {
+  color: var(--antique-gold);
+  text-decoration: none;
+}
+
+.faq-item[open] summary:hover,
+.faq-item[open] summary:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
 .faq-item p.about-text {
   margin: 0.15rem 0 0.85rem;
   padding: 0;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: border-color 0.2s ease, background-color 0.2s ease, padding 0.2s ease;
+}
+
+.faq-item[open] p.about-text {
+  border-color: var(--gold);
+  background: color-mix(in srgb, var(--gold) 8%, transparent);
+  padding: 0.8rem 0.95rem;
 }
 
 @media (max-width: 1024px) {
