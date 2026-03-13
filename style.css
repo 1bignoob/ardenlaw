@@ -246,6 +246,7 @@ body {
   margin: 0;
   padding: 0.35rem 0 0.35rem 1.1rem;
   position: relative;
+  color: var(--burgundy);
   transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
@@ -269,11 +270,9 @@ body {
   display: none;
 }
 
-.faq-item summary:hover,
 .faq-item summary:focus-visible {
-  color: var(--antique-gold);
-  text-decoration: underline;
-  text-underline-offset: 0.18em;
+  color: var(--burgundy);
+  text-decoration: none;
 }
 
 .faq-item[open] summary {
@@ -281,10 +280,27 @@ body {
   text-decoration: none;
 }
 
-.faq-item[open] summary:hover,
 .faq-item[open] summary:focus-visible {
-  text-decoration: underline;
-  text-underline-offset: 0.18em;
+  text-decoration: none;
+}
+
+.faq-item:not([open]) summary,
+.faq-item:not([open]) summary:focus-visible {
+  color: var(--burgundy);
+  text-decoration: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .faq-item summary:hover {
+    color: var(--antique-gold);
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+
+  .faq-item[open] summary:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
 }
 
 .faq-item p.about-text {
@@ -305,6 +321,27 @@ body {
   .faq-columns {
     grid-template-columns: 1fr;
     gap: 0;
+  }
+
+  .faq-item summary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.45rem;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .faq-item summary::before {
+    position: static;
+    top: auto;
+    left: auto;
+    font-size: 1.15rem;
+    transform: rotate(0deg);
+  }
+
+  .faq-item[open] summary::before {
+    transform: rotate(90deg);
   }
 }
 
