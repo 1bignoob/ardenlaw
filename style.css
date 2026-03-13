@@ -277,7 +277,8 @@ body {
 
 .faq-item[open] summary {
   color: var(--antique-gold);
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
 }
 
 .faq-item[open] summary:focus-visible {
