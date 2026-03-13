@@ -33,7 +33,7 @@ body {
   /* LAYOUT NOTE: reduced side margins/gutters by ~70% */
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 0.4rem;
+  padding: 0 0.75rem;
 }
 
 /* Navigation */
@@ -268,6 +268,8 @@ body {
 
 .faq-item[open] summary::before {
   transform: translateY(-52%) rotate(90deg);
+  text-decoration: none;
+  display: inline-block;
 }
 
 .faq-item summary::-webkit-details-marker {
@@ -302,11 +304,19 @@ body {
 @media (hover: hover) and (pointer: fine) {
   .faq-item summary:hover {
     color: var(--antique-gold);
+    text-decoration: none;
+  }
+
+  .faq-item[open] summary:hover {
+    text-decoration: none;
+  }
+
+  .faq-item summary:hover h2 {
     text-decoration: underline;
     text-underline-offset: 0.18em;
   }
 
-  .faq-item[open] summary:hover {
+  .faq-item[open] summary:hover h2 {
     text-decoration: underline;
     text-underline-offset: 0.18em;
   }
@@ -1269,6 +1279,12 @@ section {
   .settlement-card { flex: 0 0 calc((100% - 1.6rem) / 3); }
   .practice-detail-content { grid-template-columns: 1fr; }
   .practice-detail-sidebar { position: static; }
+}
+
+@media (max-width: 1400px) and (min-width: 769px) {
+  .container {
+    padding: 0 1.2rem;
+  }
 }
 
 @media (max-width: 768px) {
