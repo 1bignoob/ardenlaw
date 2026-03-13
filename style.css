@@ -258,7 +258,9 @@ body {
   transform: translateY(-52%) rotate(0deg);
   color: var(--antique-gold);
   font-size: 0.9rem;
+  font-weight: 700;
   line-height: 1;
+  text-decoration: none;
   transition: transform 0.2s ease;
 }
 
@@ -277,6 +279,10 @@ body {
 
 .faq-item[open] summary {
   color: var(--antique-gold);
+  text-decoration: none;
+}
+
+.faq-item[open] summary h2 {
   text-decoration: underline;
   text-underline-offset: 0.18em;
 }
