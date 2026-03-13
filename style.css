@@ -251,13 +251,13 @@ body {
 }
 
 .faq-item summary::before {
-  content: ">";
+  content: "▸";
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-52%) rotate(0deg);
   color: var(--antique-gold);
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 900;
   -webkit-text-stroke: 0.35px currentColor;
   text-shadow: 0 0 0 currentColor;
@@ -1357,17 +1357,18 @@ section {
   .faq-item summary {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
-    align-items: center;
+    align-items: start;
     justify-content: unset;
     gap: 0.45rem;
-    width: fit-content;
+    width: 100%;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0;
     text-align: left;
   }
 
   .faq-item summary::before {
-    align-self: center;
+    align-self: start;
+    margin-top: 0.2em;
   }
 
   .faq-item summary h2 {
