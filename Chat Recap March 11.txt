@@ -1,6 +1,6 @@
 Chat Recap March 11
 
-You evolved the Arden Law site from basic content edits into a full SEO and UX refinement pass. First, navigation and mobile behavior were stabilized: menu close/open logic was fixed, dropdown behavior improved, and layout spacing adjusted for smaller screens. Then you executed broad SEO work across all pages: meta descriptions, keywords, canonical links, structured data, and a standardized head-tag order. You also prepared launch readiness by adding “Remove .html when live” comments wherever clean URLs will later replace .html links.
+You evolved the Arden Law Firm site from basic content edits into a full SEO and UX refinement pass. First, navigation and mobile behavior were stabilized: menu close/open logic was fixed, dropdown behavior improved, and layout spacing adjusted for smaller screens. Then you executed broad SEO work across all pages: meta descriptions, keywords, canonical links, structured data, and a standardized head-tag order. You also prepared launch readiness by adding “Remove .html when live” comments wherever clean URLs will later replace .html links.
 
 Next, naming and content polish followed: pages were renamed for simplicity, all internal links updated, robots directives were adjusted and documented, JSON-LD URLs were corrected page-by-page, and contact schema received a postal address. Heading hierarchy was then optimized for semantic SEO (single H1 per page, cleaner H2/H3/H4 flow).
 

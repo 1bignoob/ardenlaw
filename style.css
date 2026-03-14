@@ -1,4 +1,4 @@
-/* Arden Law - Combined Stylesheet */
+/* Arden Law Firm - Combined Stylesheet */
 
 :root {
   --burgundy: #7B2B24;
@@ -231,6 +231,22 @@ body {
   align-items: start;
 }
 
+.faq-help-line {
+  text-align: left;
+  margin: -0.5rem 0 1.5rem;
+}
+
+.faq-help-line a {
+  color: var(--burgundy);
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.faq-help-line a:hover,
+.faq-help-line a:focus-visible {
+  color: var(--antique-gold);
+}
+
 .faq-column {
   display: flex;
   flex-direction: column;
@@ -323,17 +339,46 @@ body {
 }
 
 .faq-item p.about-text {
-  margin: 0.15rem 0 0.85rem;
+  margin: 0;
   padding: 0;
-  border: 1px solid transparent;
-  border-radius: 8px;
+  border: 0;
+  border-radius: 0;
   transition: border-color 0.2s ease, background-color 0.2s ease, padding 0.2s ease;
 }
 
 .faq-item[open] p.about-text {
-  border-color: var(--gold);
+  border-left: 1px solid var(--gold);
+  border-right: 1px solid var(--gold);
   background: color-mix(in srgb, var(--gold) 8%, transparent);
-  padding: 0.8rem 0.95rem;
+  padding: 0.2rem 0.95rem;
+}
+
+.faq-item[open] p.about-text:first-of-type {
+  margin-top: 0.15rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--gold);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.faq-item[open] p.about-text:last-of-type {
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--gold);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.faq-item p.about-text a {
+  color: var(--burgundy);
+  text-decoration: underline;
+  text-underline-offset: 0.26em;
+  text-transform: none;
+}
+
+.faq-item p.about-text a:hover,
+.faq-item p.about-text a:focus-visible {
+  color: var(--antique-gold);
 }
 
 @media (max-width: 1024px) {
@@ -503,6 +548,27 @@ body {
   flex-wrap: wrap;
 }
 
+.contact-hero-buttons {
+  margin-bottom: 1rem;
+}
+
+.contact-hero-location {
+  text-align: left;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.contact-hero-location a {
+  color: var(--burgundy);
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.contact-hero-location a:hover,
+.contact-hero-location a:focus-visible {
+  color: var(--antique-gold);
+}
+
 .hero-value-cards {
   display: flex;
   gap: 1rem;
@@ -649,21 +715,20 @@ body {
 
 .btn-primary {
   background: var(--burgundy);
-}
-
-.btn-primary:hover {
-  background: transparent;
-  color: var(--burgundy);
+  color: var(--text-light);
 }
 
 .btn-secondary {
-  background: transparent;
-  color: var(--burgundy);
-}
-
-.btn-secondary:hover {
   background: var(--burgundy);
   color: var(--text-light);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible,
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  background: var(--oxblood);
+  color: var(--gold);
 }
 
 /* Sections */
@@ -1342,7 +1407,9 @@ section {
   .hero-label { text-align: center; }
   .hero-title { font-size: 2rem; text-align: center; }
   .hero-subtitle { text-align: center; }
+  .faq-help-line { text-align: center; }
   .hero-buttons { flex-direction: column; }
+  .contact-hero-location { text-align: center; }
   .btn { width: 100%; text-align: center; }
   .contact-content { grid-template-columns: 1fr; text-align: center; }
   .hero-features { gap: 0.6rem; }

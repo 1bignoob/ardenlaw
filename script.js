@@ -201,7 +201,7 @@ if (form) {
             if (response.status == 200) {
                 submissionSucceeded = true;
                 result.style.display = "block";
-                result.innerHTML = `${json.message} Someone from the offices of Arden Law will contact you shortly.`;
+                result.innerHTML = `${json.message} Someone from the offices of Arden Law Firm will contact you shortly.`;
             } else {
                 console.log(response);
                 submissionSucceeded = false;

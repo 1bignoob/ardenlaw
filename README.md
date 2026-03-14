@@ -1,10 +1,10 @@
-# Arden Law - Attorney Website
+# Arden Law Firm - Attorney Website
 
-A professional law firm website featuring a blocky, attorney-focused design style. This website represents Arden Law, specializing in injury law.
+A professional law firm website featuring a blocky, attorney-focused design style. This website represents Arden Law Firm, specializing in injury law.
 
 ## 🎯 Overview
 
-This website reimagines the Arden Law online presence with a more traditional, blocky attorney design while maintaining all the original content and messaging. The design emphasizes professionalism, trust, and clear communication through strong geometric sections, a sophisticated color palette, and clean typography.
+This website reimagines the Arden Law Firm online presence with a more traditional, blocky attorney design while maintaining all the original content and messaging. The design emphasizes professionalism, trust, and clear communication through strong geometric sections, a sophisticated color palette, and clean typography.
 
 ## ✨ Features
 
@@ -139,7 +139,7 @@ The contact form uses a `mailto:` link functionality. When submitted:
 
 ## 📄 License
 
-This project is created for Arden Law. All content and design are property of Arden Law.
+This project is created for Arden Law Firm. All content and design are property of Arden Law Firm.
 
 ## 🙋 Support
 
