@@ -32,6 +32,45 @@ navLinks.forEach(link => {
     }
 });
 
+// Insert breadcrumb under navbar on all pages.
+document.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.querySelector('.navbar');
+    if (!navbar || document.querySelector('.breadcrumb-bar')) return;
+
+    const pageNames = {
+        'index.html': 'Home',
+        'about.html': 'About Our Firm',
+        'practice-areas.html': 'Practice Areas',
+        'car-accidents.html': 'Car Accidents',
+        'truck-accidents.html': 'Truck Accidents',
+        'slip-and-fall.html': 'Slip and Fall',
+        'medical-malpractice.html': 'Medical Malpractice',
+        'wrongful-death.html': 'Wrongful Death',
+        'work-injuries.html': 'Work Injuries',
+        'faq.html': 'FAQ',
+        'contact.html': 'Contact'
+    };
+
+    const fileName = window.location.pathname.split('/').pop() || 'index.html';
+    if (fileName === 'index.html') return;
+    const currentLabel = pageNames[fileName] || fileName.replace('.html', '').replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+
+    const section = document.createElement('section');
+    section.className = 'breadcrumb-bar';
+
+    section.innerHTML =
+        '<div class="container">' +
+            '<nav class="breadcrumb" aria-label="Breadcrumb">' +
+                '<ol class="breadcrumb-list">' +
+                    '<li><a href="index.html">Home</a></li>' +
+                    '<li><span class="current" aria-current="page">' + currentLabel + '</span></li>' +
+                '</ol>' +
+            '</nav>' +
+        '</div>';
+
+    navbar.insertAdjacentElement('afterend', section);
+});
+
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         if (window.innerWidth <= 768 && e.currentTarget.classList.contains('dropdown-toggle')) {

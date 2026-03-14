@@ -195,6 +195,52 @@ body {
   color: var(--gold);
 }
 
+/* Breadcrumb */
+.breadcrumb-bar {
+  background: transparent;
+  border: 0;
+  padding-top: 0.35rem;
+}
+
+.breadcrumb {
+  padding: 0.25rem 0 0.5rem;
+  font-size: 0.84rem;
+  color: var(--text-dark);
+}
+
+.breadcrumb-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumb-list li + li::before {
+  content: '/';
+  color: var(--gold-deep);
+  margin-right: 0.45rem;
+}
+
+.breadcrumb-list a {
+  color: var(--burgundy);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.breadcrumb-list a:hover,
+.breadcrumb-list a:focus-visible {
+  color: var(--antique-gold);
+  border-bottom-color: var(--antique-gold);
+}
+
+.breadcrumb-list .current {
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
 /* Practice Detail Pages */
 .practice-detail {
   background: var(--parchment);
@@ -545,8 +591,17 @@ body {
   color: var(--text-dark);
 }
 
+.hero-context {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  max-width: 900px;
+}
+
 .hero-buttons {
   display: flex;
+  justify-content: center;
   gap: 1.5rem;
   margin-top: 1rem;
   margin-bottom: 5rem;
@@ -916,6 +971,16 @@ section {
 .practice-description {
   color: var(--text-dark);
   line-height: 1.6;
+}
+
+.flip-hint {
+  margin-top: 1rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  opacity: 0.95;
 }
 
 /* Process */
@@ -1441,6 +1506,7 @@ section {
   .hero-label { text-align: center; }
   .hero-title { font-size: 2rem; text-align: center; }
   .hero-subtitle { text-align: center; }
+  .hero-context { text-align: center; }
   .faq-help-line { text-align: center; }
   .hero-buttons { flex-direction: column; }
   .contact-hero-location { text-align: center; }
