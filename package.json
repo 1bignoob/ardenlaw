@@ -1,0 +1,17 @@
+{
+  "name": "ardenlaw",
+  "version": "1.0.0",
+  "description": "A professional law firm website featuring a blocky, attorney-focused design style. This website represents Arden Law Firm, specializing in injury law.",
+  "main": "script.js",
+  "scripts": {
+    "test": "playwright test",
+    "qa:mobile": "playwright test tests/mobile-layout.spec.ts",
+    "qa:mobile:headed": "playwright test tests/mobile-layout.spec.ts --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2"
+  }
+}

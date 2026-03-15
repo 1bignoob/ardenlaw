@@ -319,9 +319,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll(
         '.priorities .section-title, .priorities-grid .priority-block, .priorities-description, .value-card, .practice-card, .process-step, .benefit-card'
     );
+    const isMobileViewport = window.matchMedia('(max-width: 768px)').matches;
     
     animatedElements.forEach((el, index) => {
-        const horizontalOffset = index % 2 === 0 ? -34 : 34;
+        const horizontalOffset = isMobileViewport ? 0 : (index % 2 === 0 ? -34 : 34);
         el.style.opacity = '0';
         el.style.transform = `translate3d(${horizontalOffset}px, 40px, 0) scale(0.96)`;
         el.style.filter = 'blur(10px)';
