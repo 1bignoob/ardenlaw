@@ -3,3 +3,9 @@ assets/data/
 node_modules/
 playwright-report/
 test-results/
+
+# Local QA/tooling files
+package.json
+package-lock.json
+playwright.config.ts
+tests/mobile-layout.spec.ts
