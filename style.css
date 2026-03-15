@@ -1288,6 +1288,16 @@ section {
   color: var(--text-light);
   border-top: 2px solid var(--gold);
   padding: 2rem 0;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.footer-primary {
+  grid-column: 2;
   text-align: center;
 }
 
@@ -1299,6 +1309,28 @@ section {
 
 .footer-text {
   color: rgba(246,241,234,0.9);
+}
+
+.footer-legal-links {
+  grid-column: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+  text-align: right;
+}
+
+.footer-legal-links a {
+  color: var(--text-light);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.footer-legal-links a:hover,
+.footer-legal-links a:focus-visible {
+  color: var(--gold);
+  border-bottom-color: var(--gold);
 }
 
 /* Responsive */
@@ -1429,6 +1461,14 @@ section {
   .settlement-name { font-size: 0.82rem; }
   .settlement-amount { font-size: 0.94rem; }
   .practice-cta-bar .btn { margin: 0.4rem 0; }
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .footer-legal-links {
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) and (orientation: portrait) {
