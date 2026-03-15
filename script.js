@@ -2,6 +2,15 @@
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.getElementById('navMenu');
 
+function syncNavbarHeightVar() {
+    const navbar = document.querySelector('.navbar');
+    if (!navbar) return;
+    document.documentElement.style.setProperty('--navbar-height', `${navbar.offsetHeight}px`);
+}
+
+window.addEventListener('resize', syncNavbarHeightVar);
+document.addEventListener('DOMContentLoaded', syncNavbarHeightVar);
+
 navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
     
@@ -304,63 +313,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Phone and email are now native anchor tags, no JS click handlers needed
-
-// Practice Card Flip Functionality for Mobile/Touch Devices
-document.addEventListener('DOMContentLoaded', () => {
-    const practiceCards = document.querySelectorAll('.practice-card');
-
-    const isTouchDevice = ('ontouchstart' in window) ||
-        (navigator.maxTouchPoints > 0) ||
-        (navigator.msMaxTouchPoints > 0);
-
-    if (!isTouchDevice) return;
-
-    practiceCards.forEach(card => {
-        card.addEventListener('click', function(e) {
-            // Allow scrolling on back side text
-            if (e.target.closest('.practice-description-detailed') && this.classList.contains('flipped')) {
-                return;
-            }
-            
-            // Close all other cards
-            practiceCards.forEach(otherCard => {
-                if (otherCard !== this) {
-                    otherCard.classList.remove('flipped');
-                }
-            });
-            
-            // Toggle this card
-            this.classList.toggle('flipped');
-        });
-    });
-
-    // Close all cards when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!e.target.closest('.practice-card')) {
-            practiceCards.forEach(card => {
-                card.classList.remove('flipped');
-            });
-        }
-    });
-});
-
-// Show overflow indicator only on practice cards with clipped detailed text.
-document.addEventListener('DOMContentLoaded', () => {
-    const updatePracticeOverflowState = () => {
-        const practiceCardBacks = document.querySelectorAll('.practice-card-back');
-
-        practiceCardBacks.forEach((cardBack) => {
-            const detailedText = cardBack.querySelector('.practice-description-detailed');
-            if (!detailedText) return;
-
-            const hasOverflow = detailedText.scrollHeight > detailedText.clientHeight + 1;
-            cardBack.classList.toggle('has-overflow', hasOverflow);
-        });
-    };
-
-    updatePracticeOverflowState();
-    window.addEventListener('resize', updatePracticeOverflowState);
-});
 
 /* SETTLEMENT CAROUSEL COMMENTED OUT — uncomment to restore (mirrors assets/data/settlements.json)
 document.addEventListener('DOMContentLoaded', () => {

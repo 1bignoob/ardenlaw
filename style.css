@@ -1,6 +1,7 @@
 /* Arden Law Firm - Combined Stylesheet */
 
 :root {
+  --navbar-height: 62px;
   --burgundy: #7B2B24;
   --oxblood: #5A1F1B;
   --parchment: #EFE7DE;
@@ -26,7 +27,7 @@ body {
   background: var(--parchment);
   color: var(--text-dark);
   line-height: 1.6;
-  padding-top: 62px;
+  padding-top: var(--navbar-height);
 }
 
 .container {
@@ -972,6 +973,10 @@ section {
   background: white;
   border: 2px solid var(--gold);
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s;
@@ -981,19 +986,6 @@ section {
 .practice-card:hover {
   box-shadow: 0 6px 16px rgba(0,0,0,0.1);
   transform: translateY(-4px);
-}
-
-.practice-card-inner {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-}
-
-.practice-card-front {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
 }
 
 .practice-number {
@@ -1040,14 +1032,6 @@ section {
   border: 2px solid var(--gold);
   padding: 2rem;
   text-align: center;
-  transition: all 0.3s;
-}
-
-.process-step:hover {
-  background: var(--slate-blue);
-  color: var(--text-light);
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
 }
 
 .step-number {
@@ -1062,20 +1046,10 @@ section {
   font-weight: 700;
   color: var(--burgundy);
   margin-bottom: 1rem;
-  transition: color 0.3s;
-}
-
-.process-step:hover .step-content h3 {
-  color: var(--gold);
 }
 
 .step-content p {
   color: var(--text-dark);
-  transition: color 0.3s;
-}
-
-.process-step:hover .step-content p {
-  color: var(--text-light);
 }
 
 /* Testimonials */
