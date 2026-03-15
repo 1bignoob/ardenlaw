@@ -537,22 +537,22 @@ body {
 }
 
 .practice-cta-bar {
-  background: var(--oxblood);
-  border-top: 2px solid var(--gold);
-  border-bottom: 2px solid var(--gold);
+  background: var(--parchment);
+  border-top: 0;
+  border-bottom: 1px solid var(--parchment-line);
   padding: 3rem 0;
   text-align: center;
 }
 
 .practice-cta-bar h2 {
-  color: var(--text-light);
+  color: var(--burgundy);
   font-size: 1.6rem;
   font-weight: 700;
   margin-bottom: 0.75rem;
 }
 
 .practice-cta-bar p {
-  color: rgba(246,241,234,0.85);
+  color: var(--text-dark);
   margin-bottom: 1.5rem;
   font-size: 1rem;
 }
@@ -1158,9 +1158,9 @@ section {
   max-width: 900px;
   margin: 0 auto 2rem;
   padding: 2rem;
-  background: var(--slate-blue);
+  background: white;
   border: 2px solid var(--gold);
-  color: var(--text-light);
+  color: var(--text-dark);
   text-align: center;
 }
 
