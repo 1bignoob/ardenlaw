@@ -8,8 +8,21 @@ function syncNavbarHeightVar() {
     document.documentElement.style.setProperty('--navbar-height', `${navbar.offsetHeight}px`);
 }
 
-window.addEventListener('resize', syncNavbarHeightVar);
-document.addEventListener('DOMContentLoaded', syncNavbarHeightVar);
+function syncBreadcrumbHeightVar() {
+    const breadcrumb = document.querySelector('.breadcrumb-bar');
+    const height = breadcrumb ? breadcrumb.offsetHeight : 0;
+    document.documentElement.style.setProperty('--breadcrumb-height', `${height}px`);
+}
+
+window.addEventListener('resize', () => {
+    syncNavbarHeightVar();
+    syncBreadcrumbHeightVar();
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    syncNavbarHeightVar();
+    syncBreadcrumbHeightVar();
+});
 
 navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
@@ -32,6 +45,11 @@ const navLinks = document.querySelectorAll('.nav-menu a');
 
 // Highlight current page in nav across all pages.
 const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+const isHomePage = currentPath === 'index.html';
+
+document.body.classList.toggle('home-page', isHomePage);
+document.body.classList.toggle('subpage-page', !isHomePage);
+
 navLinks.forEach(link => {
     const href = link.getAttribute('href');
     if (!href || href.startsWith('#')) return;
@@ -60,9 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
         'contact.html': 'Contact'
     };
 
-    const fileName = window.location.pathname.split('/').pop() || 'index.html';
-    if (fileName === 'index.html') return;
-    const currentLabel = pageNames[fileName] || fileName.replace('.html', '').replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+    if (isHomePage) return;
+    const currentLabel = pageNames[currentPath] || currentPath.replace('.html', '').replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
 
     const section = document.createElement('section');
     section.className = 'breadcrumb-bar';
@@ -78,6 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
         '</div>';
 
     navbar.insertAdjacentElement('afterend', section);
+    document.body.classList.add('has-breadcrumb');
+    syncBreadcrumbHeightVar();
 });
 
 navLinks.forEach(link => {
