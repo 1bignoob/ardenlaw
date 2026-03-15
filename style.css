@@ -1496,6 +1496,31 @@ section {
 }
 
 @media (max-width: 768px) and (orientation: portrait) {
+  .footer-primary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  .footer-brand {
+    font-size: 1.2rem;
+    white-space: nowrap;
+  }
+
+  .footer-text {
+    font-size: 0.92rem;
+    white-space: nowrap;
+  }
+
+  .footer-legal-links {
+    gap: 0.7rem;
+  }
+
+  .footer-legal-links a {
+    font-size: 0.92rem;
+  }
+
   .faq-item summary {
     display: grid;
     grid-template-columns: auto minmax(0, 1fr);
