@@ -9,3 +9,4 @@ package.json
 package-lock.json
 playwright.config.ts
 tests/mobile-layout.spec.ts
+tests/site-smoke.spec.ts
