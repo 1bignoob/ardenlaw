@@ -1205,6 +1205,30 @@ section {
   color: var(--gold);
 }
 
+.detail-item-hours {
+  align-items: flex-start;
+}
+
+.detail-icon-svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  color: var(--gold-deep);
+  margin-top: 0.1rem;
+}
+
+.detail-hours {
+  display: block;
+  line-height: 1.5;
+}
+
+.detail-hours:hover {
+  color: var(--text-dark);
+}
+
+.detail-hours strong {
+  color: var(--text-dark);
+}
+
 /* Form */
 .contact-form-wrapper {
   padding: 2rem;
