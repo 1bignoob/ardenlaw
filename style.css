@@ -656,6 +656,13 @@ body {
   background-position: center 8%;
 }
 
+.hero-image-about {
+  background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.32) 44%, rgba(0, 0, 0, 0.12) 72%),
+    url('assets/img/About.png');
+  background-position: center 8%;
+}
+
 .hero-image-overlay {
   padding: clamp(1.5rem, 4vw, 3rem);
   max-width: 760px;
@@ -1559,6 +1566,7 @@ section {
   .hero-image-work-injuries { background-position: center 12%; }
   .hero-image-wrongful-death { background-position: center 12%; }
   .hero-image-contact { background-position: center 12%; }
+  .hero-image-about { background-position: center 12%; }
   .hero-image-overlay { max-width: 92%; }
   .about-content, .contact-content { grid-template-columns: 1fr; }
   .badge-img { height: 48px; }
@@ -1644,6 +1652,7 @@ section {
   .hero-image-work-injuries { background-position: center 16%; }
   .hero-image-wrongful-death { background-position: center 16%; }
   .hero-image-contact { background-position: center 16%; }
+  .hero-image-about { background-position: center 16%; }
   .hero-image-overlay {
     max-width: 100%;
     padding: 1.25rem;
