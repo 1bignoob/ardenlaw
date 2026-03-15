@@ -649,6 +649,13 @@ body {
   background-position: center 8%;
 }
 
+.hero-image-contact {
+  background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.32) 44%, rgba(0, 0, 0, 0.12) 72%),
+    url('assets/img/Contact.png');
+  background-position: center 8%;
+}
+
 .hero-image-overlay {
   padding: clamp(1.5rem, 4vw, 3rem);
   max-width: 760px;
@@ -720,6 +727,26 @@ body {
   text-align: left;
   margin: 0;
   font-size: 1rem;
+}
+
+.contact-hero-location strong {
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+.contact-hero-map {
+  width: 100%;
+  height: 250px;
+  border: 2px solid var(--gold);
+  margin-bottom: 0.55rem;
+  box-shadow: 0 8px 20px rgba(40, 18, 16, 0.16);
+}
+
+.contact-hero-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(1) invert(0.9) hue-rotate(180deg) saturate(0.85) contrast(0.95) brightness(0.9);
 }
 
 .contact-hero-location a {
@@ -1531,6 +1558,7 @@ section {
   .hero-image-slip-and-fall { background-position: center 12%; }
   .hero-image-work-injuries { background-position: center 12%; }
   .hero-image-wrongful-death { background-position: center 12%; }
+  .hero-image-contact { background-position: center 12%; }
   .hero-image-overlay { max-width: 92%; }
   .about-content, .contact-content { grid-template-columns: 1fr; }
   .badge-img { height: 48px; }
@@ -1615,6 +1643,7 @@ section {
   .hero-image-slip-and-fall { background-position: center 16%; }
   .hero-image-work-injuries { background-position: center 16%; }
   .hero-image-wrongful-death { background-position: center 16%; }
+  .hero-image-contact { background-position: center 16%; }
   .hero-image-overlay {
     max-width: 100%;
     padding: 1.25rem;
