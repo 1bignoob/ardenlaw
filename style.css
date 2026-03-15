@@ -1301,6 +1301,7 @@ section {
   padding: 2rem;
   background: var(--parchment);
   border: 2px solid var(--gold);
+  scroll-margin-top: calc(var(--navbar-height) + 1.5rem);
 }
 
 .contact-form {
