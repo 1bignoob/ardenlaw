@@ -592,7 +592,7 @@ body {
   border: 2px solid var(--gold);
   background-image:
     linear-gradient(90deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.32) 44%, rgba(0, 0, 0, 0.12) 72%),
-    url('assets/img/NY_Attorney.png');
+    url('assets/img/NY_Attorney.webp');
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -603,70 +603,70 @@ body {
 .hero-image-practice-areas {
   background-image:
     linear-gradient(90deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.32) 44%, rgba(0, 0, 0, 0.12) 72%),
-    url('assets/img/PracticeAreas.png');
+    url('assets/img/PracticeAreas.webp');
   background-position: center 6%;
 }
 
 .hero-image-car-accidents {
   background-image:
     linear-gradient(90deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.32) 44%, rgba(0, 0, 0, 0.12) 72%),
-    url('assets/img/Car.png');
+    url('assets/img/Car.webp');
   background-position: center 8%;
 }
 
 .hero-image-truck-accidents {
   background-image:
     linear-gradient(90deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.32) 44%, rgba(0, 0, 0, 0.12) 72%),
-    url('assets/img/Truck.png');
+    url('assets/img/Truck.webp');
   background-position: center 8%;
 }
 
 .hero-image-medical-malpractice {
   background-image:
     linear-gradient(90deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.32) 44%, rgba(0, 0, 0, 0.12) 72%),
-    url('assets/img/MedicalMalpractice.png');
+    url('assets/img/MedicalMalpractice.webp');
   background-position: center 8%;
 }
 
 .hero-image-slip-and-fall {
   background-image:
     linear-gradient(90deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.32) 44%, rgba(0, 0, 0, 0.12) 72%),
-    url('assets/img/SlipAndFall.png');
+    url('assets/img/SlipAndFall.webp');
   background-position: center 8%;
 }
 
 .hero-image-work-injuries {
   background-image:
     linear-gradient(90deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.32) 44%, rgba(0, 0, 0, 0.12) 72%),
-    url('assets/img/WorkInjury.png');
+    url('assets/img/WorkInjury.webp');
   background-position: center 8%;
 }
 
 .hero-image-wrongful-death {
   background-image:
     linear-gradient(90deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.32) 44%, rgba(0, 0, 0, 0.12) 72%),
-    url('assets/img/WrongfulDeath.png');
+    url('assets/img/WrongfulDeath.webp');
   background-position: center 8%;
 }
 
 .hero-image-contact {
   background-image:
     linear-gradient(90deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.32) 44%, rgba(0, 0, 0, 0.12) 72%),
-    url('assets/img/Contact.png');
+    url('assets/img/Contact.webp');
   background-position: center 8%;
 }
 
 .hero-image-about {
   background-image:
     linear-gradient(90deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.32) 44%, rgba(0, 0, 0, 0.12) 72%),
-    url('assets/img/About.png');
+    url('assets/img/About.webp');
   background-position: center 28%;
 }
 
 .hero-image-faq {
   background-image:
     linear-gradient(90deg, rgba(0, 0, 0, 0.58) 0%, rgba(0, 0, 0, 0.32) 44%, rgba(0, 0, 0, 0.12) 72%),
-    url('assets/img/faq.png');
+    url('assets/img/faq.webp');
   background-position: center 34%;
 }
 
