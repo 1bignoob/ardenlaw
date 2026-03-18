@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1040" viewBox="0 0 1600 1040" role="img" aria-labelledby="title desc">
+  <title id="title">Arden Law Firm Sitemap</title>
+  <desc id="desc">Client-facing sitemap showing the main navigation, practice area pages, and legal footer pages for Arden Law Firm.</desc>
+  <defs>
+    <style>
+      text { font-family: Georgia, 'Times New Roman', serif; fill: #7B2B24; }
+      .title { font-size: 38px; font-weight: 700; fill: #7B2B24; }
+      .subtitle { font-size: 16px; fill: #3B2A26; }
+      .section-label { font-size: 14px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; fill: #7B2B24; }
+      .section-label-entry { fill: #7A551F; }
+      .node-title { font-size: 18px; font-weight: 700; fill: #7B2B24; }
+      .node-sub { font-size: 12px; fill: #3B2A26; }
+      .link { stroke: #7A551F; stroke-width: 2.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .node-home { fill: #EFE7DE; stroke: #7A551F; }
+      .node-core { fill: #F6F1EA; stroke: #D4C5B4; }
+      .node-practice { fill: #EFE7DE; stroke: #C6A46A; }
+      .node-detail { fill: #FBF8F3; stroke: #D4C5B4; }
+      .node-legal { fill: #F6F1EA; stroke: #C6A46A; }
+      .node, .legend-box { stroke-width: 2; rx: 18; ry: 18; }
+    </style>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#5A1F1B" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7A551F"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="1040" fill="#EFE7DE"/>
+  <rect x="80" y="132" width="1440" height="2" fill="#C6A46A" opacity="0.85"/>
+
+  <text x="80" y="78" class="title">Arden Law Firm</text>
+  <text x="80" y="110" class="subtitle">Website sitemap for client presentation</text>
+
+  <text x="80" y="170" class="section-label section-label-entry">Primary Entry Point</text>
+  <text x="540" y="170" class="section-label">Main Navigation</text>
+  <text x="1040" y="170" class="section-label">Practice Area Detail Pages</text>
+  <text x="1210" y="810" class="section-label">Footer Legal Pages</text>
+
+  <path class="link" marker-end="url(#arrow)" d="M 290 260 C 360 260, 380 260, 450 260"/>
+  <path class="link" marker-end="url(#arrow)" d="M 290 260 C 350 210, 400 210, 450 210"/>
+  <path class="link" marker-end="url(#arrow)" d="M 290 260 C 350 310, 400 310, 450 310"/>
+  <path class="link" marker-end="url(#arrow)" d="M 290 260 C 350 410, 400 410, 450 410"/>
+  <path class="link" marker-end="url(#arrow)" d="M 290 260 C 350 510, 400 510, 450 510"/>
+
+  <path class="link" marker-end="url(#arrow)" d="M 790 260 C 880 260, 900 220, 990 220"/>
+  <path class="link" marker-end="url(#arrow)" d="M 790 260 C 880 260, 900 310, 990 310"/>
+  <path class="link" marker-end="url(#arrow)" d="M 790 260 C 880 260, 900 400, 990 400"/>
+  <path class="link" marker-end="url(#arrow)" d="M 790 260 C 880 260, 900 490, 990 490"/>
+  <path class="link" marker-end="url(#arrow)" d="M 790 260 C 880 260, 900 580, 990 580"/>
+  <path class="link" marker-end="url(#arrow)" d="M 790 260 C 880 260, 900 670, 990 670"/>
+
+  <path class="link" marker-end="url(#arrow)" d="M 790 260 C 980 260, 1100 820, 1210 820"/>
+  <path class="link" marker-end="url(#arrow)" d="M 790 260 C 1000 260, 1100 890, 1210 890"/>
+  <path class="link" marker-end="url(#arrow)" d="M 790 260 C 1020 260, 1100 960, 1210 960"/>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="200" width="210" height="120" class="node node-home"/>
+    <text x="105" y="245" class="node-title">Home</text>
+    <text x="105" y="273" class="node-sub">index.html</text>
+    <text x="105" y="301" class="node-sub">Primary launch page</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="450" y="150" width="340" height="120" class="node node-practice"/>
+    <text x="475" y="195" class="node-title">Practice Areas</text>
+    <text x="475" y="223" class="node-sub">practice-areas.html</text>
+    <text x="475" y="251" class="node-sub">Hub page for all injury case types</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="450" y="330" width="340" height="100" class="node node-core"/>
+    <text x="475" y="372" class="node-title">About Our Firm</text>
+    <text x="475" y="400" class="node-sub">about.html</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="450" y="460" width="340" height="100" class="node node-core"/>
+    <text x="475" y="502" class="node-title">Contact</text>
+    <text x="475" y="530" class="node-sub">contact.html</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="450" y="590" width="340" height="100" class="node node-core"/>
+    <text x="475" y="632" class="node-title">FAQ</text>
+    <text x="475" y="660" class="node-sub">faq.html</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="990" y="170" width="420" height="84" class="node node-detail"/>
+    <text x="1015" y="205" class="node-title">Car Accidents</text>
+    <text x="1015" y="232" class="node-sub">car-accidents.html</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="990" y="260" width="420" height="84" class="node node-detail"/>
+    <text x="1015" y="295" class="node-title">Truck Accidents</text>
+    <text x="1015" y="322" class="node-sub">truck-accidents.html</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="990" y="350" width="420" height="84" class="node node-detail"/>
+    <text x="1015" y="385" class="node-title">Slip and Fall</text>
+    <text x="1015" y="412" class="node-sub">slip-and-fall.html</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="990" y="440" width="420" height="84" class="node node-detail"/>
+    <text x="1015" y="475" class="node-title">Medical Malpractice</text>
+    <text x="1015" y="502" class="node-sub">medical-malpractice.html</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="990" y="530" width="420" height="84" class="node node-detail"/>
+    <text x="1015" y="565" class="node-title">Wrongful Death</text>
+    <text x="1015" y="592" class="node-sub">wrongful-death.html</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="990" y="620" width="420" height="84" class="node node-detail"/>
+    <text x="1015" y="655" class="node-title">Work Injuries</text>
+    <text x="1015" y="682" class="node-sub">work-injuries.html</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="1210" y="770" width="290" height="82" class="node node-legal"/>
+    <text x="1235" y="805" class="node-title">Privacy Policy</text>
+    <text x="1235" y="832" class="node-sub">privacy-policy.html</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="1210" y="860" width="290" height="82" class="node node-legal"/>
+    <text x="1235" y="895" class="node-title">Terms of Use</text>
+    <text x="1235" y="922" class="node-sub">terms-of-use.html</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="1210" y="950" width="290" height="82" class="node node-legal"/>
+    <text x="1235" y="985" class="node-title">Disclaimer</text>
+    <text x="1235" y="1012" class="node-sub">disclaimer.html</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="790" width="490" height="170" class="legend-box" fill="#F6F1EA" stroke="#D4C5B4"/>
+    <text x="110" y="835" class="node-title">Reading Guide</text>
+    <text x="110" y="868" class="node-sub">Home routes visitors into the main navigation.</text>
+    <text x="110" y="895" class="node-sub">Practice Areas branches into six case-type detail pages.</text>
+    <text x="110" y="922" class="node-sub">Legal pages are available through footer links across the site.</text>
+  </g>
+</svg>
